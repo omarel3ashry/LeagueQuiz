@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_margin">20dp</dimen>
+    <dimen name="padding_margin_m">15dp</dimen>
+    <dimen name="padding_margin_s">10dp</dimen>
+    <dimen name="padding_margin_ss">5dp</dimen>
+    <dimen name="right_to_left">1dp</dimen>
+    <dimen name="cardCorners">30dp</dimen>
+
+
+</resources>

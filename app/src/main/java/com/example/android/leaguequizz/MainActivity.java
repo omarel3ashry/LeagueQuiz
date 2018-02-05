@@ -1,5 +1,8 @@
 package com.example.android.leaguequizz;
 
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +10,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Objects;
@@ -21,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox Q2n1, Q2n2, Q2n3, Q7n1, Q7n2, Q7n3, Q8n1, Q8n2, Q8n3;
     RadioGroup Q1, Q3, Q4, Q6, Q10;
     RadioButton Q1A, Q3A, Q4A, Q6A, Q10A;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         Q11 = (EditText) findViewById(R.id.q11_zed);
         Q12 = (EditText) findViewById(R.id.q12_zoe);
         name = (EditText) findViewById(R.id.name);
+
     }
 
     public void submit(View view) {
@@ -92,8 +98,12 @@ public class MainActivity extends AppCompatActivity {
             result += 1;
         }
 
-        Toast toast = Toast.makeText(this, name.getText().toString() + " your score is " + result, LENGTH_LONG);
-        toast.show();
+        Dialog fialog = new Dialog(this);
+        fialog.setContentView(R.layout.score_dialog);
+        fialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        TextView tt = (TextView) fialog.findViewById(R.id.res_dialog);
+        tt.setText(name.getText().toString()+" your score "+String.valueOf(result));
+        fialog.show();
         result = 0;
     }
 

@@ -8,28 +8,32 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/padding_margin_s"
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:id="@+id/name"
-                android:inputType="text"
-                android:hint="enter your name" />
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:hint="@string/enter_your_name"
+                android:inputType="text" />
 
             <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/card1"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
-                card_view:cardCornerRadius="30dp">
+                card_view:cardCornerRadius="@dimen/cardCorners">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -37,21 +41,25 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/q1_head"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/padding_margin_ss"
                         android:layout_weight="1"
-                        android:text="Who says this joke :"
+                        android:fontFamily="@font/audiowide"
+                        android:text="@string/who_says_this_joke"
+                        android:textColor="@color/textColor"
                         android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="@font/audiowide"
                         android:text="@string/q1"
                         android:textAlignment="center"
-                        android:textSize="25sp" />
+                        android:textColor="@color/textColor"
+                        android:textSize="23sp" />
 
                     <RadioGroup
                         android:id="@+id/joke"
@@ -59,29 +67,35 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="horizontal"
-                        android:paddingEnd="1dp"
-                        android:paddingStart="20dp">
+                        android:paddingEnd="@dimen/right_to_left"
+                        android:paddingStart="@dimen/padding_margin">
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/diana"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Diana" />
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/diana"
+                            android:textColor="@color/ansColor" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/galio"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Galio" />
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/galio"
+                            android:textColor="@color/ansColor" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/heimer"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Heimerdinger" />
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/heimerdinger"
+                            android:textColor="@color/ansColor" />
                     </RadioGroup>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -91,7 +105,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                card_view:cardCornerRadius="30dp">
+                card_view:cardCornerRadius="@dimen/cardCorners">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -100,42 +114,51 @@
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/padding_margin"
                         android:layout_weight="1"
-                        android:paddingLeft="15dp"
-                        android:text="Which of these champions playing ADC"
+                        android:fontFamily="@font/audiowide"
+                        android:paddingEnd="@dimen/right_to_left"
+                        android:paddingStart="@dimen/padding_margin_s"
+                        android:text="@string/which_of_these_champions_playing_adc"
                         android:textAlignment="center"
-                        android:textSize="25sp" />
+                        android:textColor="@color/textColor"
+                        android:textSize="23sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginBottom="@dimen/padding_margin"
                         android:orientation="horizontal"
-                        android:paddingEnd="1dp"
-                        android:paddingStart="20dp">
+                        android:paddingEnd="@dimen/right_to_left"
+                        android:paddingStart="@dimen/padding_margin">
 
                         <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:id="@+id/vayne"
-                            android:text="Vayne" />
-
-                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/vayne"
+                            android:textColor="@color/ansColor" />
+
+                        <CheckBox
                             android:id="@+id/kalista"
-                            android:text="Kalista" />
-
-                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/kalista"
+                            android:textColor="@color/ansColor" />
+
+                        <CheckBox
                             android:id="@+id/ahri"
-                            android:text="Ahri" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/ahri"
+                            android:textColor="@color/ansColor" />
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -145,7 +168,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:layout_gravity="center"
-                card_view:cardCornerRadius="30dp">
+                card_view:cardCornerRadius="@dimen/cardCorners">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -153,14 +176,16 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/q3_head"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="@dimen/padding_margin"
                         android:layout_weight="1"
-                        android:text="Who is the brother to this champ!"
-                        android:textSize="20sp" />
+                        android:textAlignment="center"
+                        android:fontFamily="@font/audiowide"
+                        android:text="@string/who_is_the_brother_to_this_champ"
+                        android:textColor="@color/textColor"
+                        android:textSize="17sp" />
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -174,29 +199,35 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="horizontal"
-                        android:paddingEnd="1dp"
-                        android:paddingStart="20dp">
+                        android:paddingEnd="@dimen/right_to_left"
+                        android:paddingStart="@dimen/padding_margin">
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/maokai"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Maokai" />
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/maokai"
+                            android:textColor="@color/ansColor" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/nasus"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Nasus" />
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/nasus"
+                            android:textColor="@color/ansColor" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/draven_b"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Draven" />
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/draven"
+                            android:textColor="@color/ansColor" />
                     </RadioGroup>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -206,7 +237,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                card_view:cardCornerRadius="30dp">
+                card_view:cardCornerRadius="@dimen/cardCorners">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -214,14 +245,15 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/q4_head"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="@dimen/padding_margin_s"
                         android:layout_weight="1"
-                        android:text="What is common between these items"
-                        android:textSize="20sp" />
+                        android:fontFamily="@font/audiowide"
+                        android:text="@string/what_is_common_between_these_items"
+                        android:textColor="@color/textColor"
+                        android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -233,7 +265,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:src="@drawable/botrk_item" />
+                            android:src="@drawable/botrk_item"
+                            tools:ignore="NestedWeights" />
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -260,29 +293,35 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="horizontal"
-                        android:paddingEnd="1dp"
-                        android:paddingStart="20dp">
+                        android:paddingEnd="@dimen/right_to_left"
+                        android:paddingStart="@dimen/padding_margin">
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/atk_spd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Attack Speed" />
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/attack_speed"
+                            android:textColor="@color/ansColor" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/armor"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Armor" />
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/armor"
+                            android:textColor="@color/ansColor" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/health"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Health" />
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/health"
+                            android:textColor="@color/ansColor" />
                     </RadioGroup>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -292,7 +331,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                card_view:cardCornerRadius="30dp">
+                card_view:cardCornerRadius="@dimen/cardCorners">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -300,32 +339,38 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/q5_head"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:paddingTop="10dp"
-                        android:text="Who says this quote :"
+                        android:fontFamily="@font/audiowide"
+                        android:paddingTop="@dimen/padding_margin_s"
+                        android:text="@string/who_says_this_quote"
+                        android:textColor="@color/textColor"
                         android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:paddingEnd="1dp"
-                        android:paddingStart="15dp"
-                        android:text="Beware a man with nothing to lose."
+                        android:fontFamily="@font/audiowide"
+                        android:paddingEnd="@dimen/right_to_left"
+                        android:paddingStart="@dimen/padding_margin_m"
+                        android:text="@string/beware_a_man_with_nothing_to_lose"
                         android:textAlignment="center"
+                        android:textColor="@color/textColor"
                         android:textSize="25sp" />
 
                     <EditText
+                        android:id="@+id/q5_varus"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q5_varus"
+                        android:fontFamily="@font/audiowide"
+                        android:hint="@string/answer_here"
                         android:inputType="text"
-                        android:hint="answer here"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@color/ansColor"
+                        android:textColorHint="@color/ansColor" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -334,7 +379,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:layout_gravity="center"
-                card_view:cardCornerRadius="30dp">
+                card_view:cardCornerRadius="@dimen/cardCorners">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -342,13 +387,14 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/q6_head"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="@dimen/padding_margin"
                         android:layout_weight="1"
-                        android:text="Who counter this champion!"
+                        android:fontFamily="@font/audiowide"
+                        android:text="@string/who_counter_this_champion"
+                        android:textColor="@color/textColor"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -363,29 +409,35 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="horizontal"
-                        android:paddingEnd="1dp"
-                        android:paddingStart="20dp">
+                        android:paddingEnd="@dimen/right_to_left"
+                        android:paddingStart="@dimen/padding_margin">
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/akali"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Akali" />
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/akali"
+                            android:textColor="@color/ansColor" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/teemo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Teemo" />
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/teemo"
+                            android:textColor="@color/ansColor" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/braum"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Braum" />
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/braum"
+                            android:textColor="@color/ansColor" />
                     </RadioGroup>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -395,7 +447,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                card_view:cardCornerRadius="30dp">
+                card_view:cardCornerRadius="@dimen/cardCorners">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -406,41 +458,50 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="@dimen/padding_margin"
                         android:layout_weight="1"
-                        android:paddingLeft="15dp"
-                        android:text="Which of these champions Can Disappear"
+                        android:fontFamily="@font/audiowide"
+                        android:paddingEnd="@dimen/padding_margin_m"
+                        android:paddingStart="@dimen/padding_margin_m"
+                        android:text="@string/which_of_these_champions_can_disappear"
                         android:textAlignment="center"
-                        android:textSize="25sp" />
+                        android:textColor="@color/textColor"
+                        android:textSize="22sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginBottom="@dimen/padding_margin"
                         android:orientation="horizontal"
-                        android:paddingEnd="1dp"
-                        android:paddingStart="20dp">
+                        android:paddingEnd="@dimen/right_to_left"
+                        android:paddingStart="@dimen/padding_margin">
 
                         <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:id="@+id/shaco"
-                            android:text="Shaco" />
-
-                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/shaco"
+                            android:textColor="@color/ansColor" />
+
+                        <CheckBox
                             android:id="@+id/twitch"
-                            android:text="Twitch" />
-
-                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/twitch"
+                            android:textColor="@color/ansColor" />
+
+                        <CheckBox
                             android:id="@+id/evelynn"
-                            android:text="Evelynn" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/evelynn"
+                            android:textColor="@color/ansColor" />
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -450,7 +511,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:layout_gravity="center"
-                card_view:cardCornerRadius="30dp">
+                card_view:cardCornerRadius="@dimen/cardCorners">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -458,13 +519,15 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/q8_head"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="@dimen/padding_margin"
                         android:layout_weight="1"
-                        android:text="In which lane this champion can play!"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/audiowide"
+                        android:text="@string/in_which_lane_this_champion_can_play"
+                        android:textColor="@color/textColor"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -478,29 +541,36 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="horizontal"
-                        android:paddingEnd="1dp"
-                        android:paddingStart="20dp">
+                        android:paddingEnd="@dimen/right_to_left"
+                        android:paddingStart="@dimen/padding_margin">
 
                         <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:id="@+id/top"
-                            android:text="Top" />
-
-                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/top"
+                            android:textColor="@color/ansColor"
+                            tools:ignore="NestedWeights" />
+
+                        <CheckBox
                             android:id="@+id/mid"
-                            android:text="Mid" />
-
-                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/mid"
+                            android:textColor="@color/ansColor" />
+
+                        <CheckBox
                             android:id="@+id/bot"
-                            android:text="Bot" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/bot"
+                            android:textColor="@color/ansColor" />
                     </LinearLayout>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -510,7 +580,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                card_view:cardCornerRadius="30dp">
+                card_view:cardCornerRadius="@dimen/cardCorners">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -518,31 +588,38 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/q9_head"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:paddingTop="10dp"
-                        android:text="Who says this quote :"
+                        android:fontFamily="@font/audiowide"
+                        android:paddingTop="@dimen/padding_margin_s"
+                        android:text="@string/who_says_this_quote"
+                        android:textColor="@color/textColor"
                         android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:paddingLeft="15dp"
-                        android:text="Seems to be blood everywhere I go."
+                        android:fontFamily="@font/audiowide"
+                        android:paddingEnd="@dimen/right_to_left"
+                        android:paddingStart="@dimen/padding_margin_m"
+                        android:text="@string/seems_to_be_blood_everywhere_i_go"
                         android:textAlignment="center"
+                        android:textColor="@color/textColor"
                         android:textSize="25sp" />
 
                     <EditText
+                        android:id="@+id/q9_draven"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q9_draven"
+                        android:fontFamily="@font/audiowide"
+                        android:hint="@string/answer_here"
                         android:inputType="text"
-                        android:hint="answer here"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@color/ansColor"
+                        android:textColorHint="@color/ansColor" />
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -552,7 +629,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:layout_gravity="center"
-                card_view:cardCornerRadius="30dp">
+                card_view:cardCornerRadius="@dimen/cardCorners">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -560,13 +637,15 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/q10_head"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="@dimen/padding_margin"
                         android:layout_weight="1"
-                        android:text="This champion is melee or ranged!"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/audiowide"
+                        android:text="@string/this_champion_is_melee_or_ranged"
+                        android:textColor="@color/textColor"
                         android:textSize="20sp" />
 
                     <ImageView
@@ -581,29 +660,35 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="horizontal"
-                        android:paddingEnd="1dp"
-                        android:paddingStart="20dp">
+                        android:paddingEnd="@dimen/right_to_left"
+                        android:paddingStart="@dimen/padding_margin">
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/ranged"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Ranged" />
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/ranged"
+                            android:textColor="@color/ansColor" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/melee"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Melee" />
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/melee"
+                            android:textColor="@color/ansColor" />
 
                         <android.support.v7.widget.AppCompatRadioButton
                             android:id="@+id/both"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Both" />
+                            android:fontFamily="@font/audiowide"
+                            android:text="@string/both"
+                            android:textColor="@color/ansColor" />
                     </RadioGroup>
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -613,22 +698,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                card_view:cardCornerRadius="30dp">
-
+                card_view:cardCornerRadius="@dimen/cardCorners">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-
                     <TextView
-                        android:id="@+id/q11_head"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="@dimen/padding_margin_ss"
                         android:layout_weight="1"
-                        android:text="For whom these abilities belong!"
-                        android:textSize="20sp" />
+                        android:fontFamily="@font/audiowide"
+                        android:text="@string/for_whom_these_abilities_belong"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -640,7 +724,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:src="@drawable/n_p" />
+                            android:src="@drawable/n_p"
+                            tools:ignore="NestedWeights" />
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -668,12 +753,15 @@
                     </LinearLayout>
 
                     <EditText
+                        android:id="@+id/q11_zed"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q11_zed"
+                        android:fontFamily="@font/audiowide"
+                        android:hint="@string/answer_here"
                         android:inputType="text"
-                        android:hint="answer here"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@color/ansColor"
+                        android:textColorHint="@color/ansColor" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
@@ -682,7 +770,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                card_view:cardCornerRadius="30dp">
+                card_view:cardCornerRadius="@dimen/cardCorners">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -690,14 +778,15 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/q12_head"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="@dimen/padding_margin_ss"
                         android:layout_weight="1"
-                        android:text="For whom these abilities belong!"
-                        android:textSize="20sp" />
+                        android:fontFamily="@font/audiowide"
+                        android:text="@string/for_whom_these_abilities_belong"
+                        android:textColor="@color/textColor"
+                        android:textSize="18sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -709,7 +798,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:src="@drawable/s_p" />
+                            android:src="@drawable/s_p"
+                            tools:ignore="NestedWeights" />
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -737,33 +827,46 @@
                     </LinearLayout>
 
                     <EditText
+                        android:id="@+id/q12_zoe"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/q12_zoe"
+                        android:fontFamily="@font/audiowide"
+                        android:hint="@string/answer_here"
                         android:inputType="text"
-                        android:hint="answer here"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="@color/ansColor"
+                        android:textColorHint="@color/ansColor" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_margin="@dimen/padding_margin_s"
+                android:orientation="horizontal"
+                style="?android:attr/buttonBarStyle">
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_margin_s"
                     android:layout_weight="1"
+                    android:background="@drawable/btn_shape"
                     android:onClick="submit"
-                    android:text="Submit" />
+                    android:text="@string/submit"
+                    android:textColor="@color/white"
+                    style="?android:attr/buttonBarButtonStyle"/>
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_margin_s"
                     android:layout_weight="1"
+                    android:background="@drawable/btn_shape"
                     android:onClick="reset"
-                    android:text="Reset" />
+                    android:text="@string/reset"
+                    android:textColor="@color/white"
+                    style="?android:attr/buttonBarButtonStyle"/>
             </LinearLayout>
         </LinearLayout>
 
