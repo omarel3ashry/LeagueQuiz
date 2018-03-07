@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -8,8 +8,44 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="quiztheme" parent="AppTheme" >
-        <item name="android:colorBackground">@color/background_material_light</item>
+    <style name="editTextStylez">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">@font/audiowide</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColor">@color/ansColor</item>
+        <item name="android:textColorHint">@color/ansColor</item>
+        <item name="android:textAlignment">center</item>
     </style>
+    <style name="txtViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">@font/audiowide</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+    <style name="radioGroupStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingEnd">@dimen/right_to_left</item>
+        <item name="android:paddingStart">@dimen/padding_margin</item>
+    </style>
+    <style name="radioAndChButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/ansColor</item>
+        <item name="android:fontFamily">@font/audiowide</item>
+    </style>
+
+    <style name="quiztheme" parent="AppTheme">
+        <item name="android:colorBackground" tools:ignore="PrivateResource">@color/background_material_light</item>
+    </style>
+
 
 </resources>

@@ -41,4 +41,15 @@
     <string name="submit">Submit</string>
     <string name="reset">Reset</string>
     <string name="enter_your_name">enter your name</string>
+    <string name="test">test</string>
+    <string name="dariuspic">dariusPic</string>
+    <string name="blade_of_the_r_king_item">Blade Of The R King Item</string>
+    <string name="rapid_fire_canon_item">Rapid Fire Canon Item</string>
+    <string name="nashor_item">Nashor Item</string>
+    <string name="phantom_dancer_item">Phantom Dancer Item</string>
+    <string name="nasus_pic">Nasus Pic</string>
+    <string name="vladmimir_pic">Vladmimir Pic</string>
+    <string name="gnar_pic">Gnar Pic</string>
+    <string name="zed_skills">Zed Skills</string>
+    <string name="zoe_skills">Zoe Skills</string>
 </resources>

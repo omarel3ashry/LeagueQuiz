@@ -1,5 +1,6 @@
 package com.example.android.leaguequizz;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -11,20 +12,17 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import java.util.Objects;
 
-import static android.widget.Toast.LENGTH_LONG;
 
 public class MainActivity extends AppCompatActivity {
 
 
     int result = 0;
-    EditText name, Q5, Q9, Q11, Q12;
-    CheckBox Q2n1, Q2n2, Q2n3, Q7n1, Q7n2, Q7n3, Q8n1, Q8n2, Q8n3;
-    RadioGroup Q1, Q3, Q4, Q6, Q10;
-    RadioButton Q1A, Q3A, Q4A, Q6A, Q10A;
+    EditText name, Question5, Question9, Question11, Question12;
+    CheckBox Question2n1, Question2n2, Question2n3, Question7n1, Question7n2, Question7n3, Question8n1, Question8n2, Question8n3;
+    RadioGroup Question1, Question3, Question4, Question6, Question10;
+    RadioButton Question1A, Question3A, Question4A, Question6A, Question10A;
 
 
     @Override
@@ -32,177 +30,182 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Q1 = (RadioGroup) findViewById(R.id.joke);
-        Q3 = (RadioGroup) findViewById(R.id.brother);
-        Q4 = (RadioGroup) findViewById(R.id.items);
-        Q6 = (RadioGroup) findViewById(R.id.nasus_counter);
-        Q10 = (RadioGroup) findViewById(R.id.gnar);
-        Q2n1 = (CheckBox) findViewById(R.id.vayne);
-        Q2n2 = (CheckBox) findViewById(R.id.kalista);
-        Q2n3 = (CheckBox) findViewById(R.id.ahri);
-        Q7n1 = (CheckBox) findViewById(R.id.shaco);
-        Q7n2 = (CheckBox) findViewById(R.id.twitch);
-        Q7n3 = (CheckBox) findViewById(R.id.evelynn);
-        Q8n1 = (CheckBox) findViewById(R.id.top);
-        Q8n2 = (CheckBox) findViewById(R.id.mid);
-        Q8n3 = (CheckBox) findViewById(R.id.bot);
-        Q5 = (EditText) findViewById(R.id.q5_varus);
-        Q9 = (EditText) findViewById(R.id.q9_draven);
-        Q11 = (EditText) findViewById(R.id.q11_zed);
-        Q12 = (EditText) findViewById(R.id.q12_zoe);
-        name = (EditText) findViewById(R.id.name);
+        Question1 = findViewById(R.id.joke);
+        Question3 = findViewById(R.id.brother);
+        Question4 = findViewById(R.id.items);
+        Question6 = findViewById(R.id.nasus_counter);
+        Question10 = findViewById(R.id.gnar);
+        Question2n1 = findViewById(R.id.vayne);
+        Question2n2 = findViewById(R.id.kalista);
+        Question2n3 = findViewById(R.id.ahri);
+        Question7n1 = findViewById(R.id.shaco);
+        Question7n2 = findViewById(R.id.twitch);
+        Question7n3 = findViewById(R.id.evelynn);
+        Question8n1 = findViewById(R.id.top);
+        Question8n2 = findViewById(R.id.mid);
+        Question8n3 = findViewById(R.id.bot);
+        Question5 = findViewById(R.id.q5_varus);
+        Question9 = findViewById(R.id.q9_draven);
+        Question11 = findViewById(R.id.q11_zed);
+        Question12 = findViewById(R.id.q12_zoe);
+        name = findViewById(R.id.name);
 
     }
 
+    @SuppressLint("SetTextI18n")
     public void submit(View view) {
-        Q1A = (RadioButton) Q1.findViewById(Q1.getCheckedRadioButtonId());
-        Q3A = (RadioButton) Q3.findViewById(Q3.getCheckedRadioButtonId());
-        Q4A = (RadioButton) Q4.findViewById(Q4.getCheckedRadioButtonId());
-        Q6A = (RadioButton) Q6.findViewById(Q6.getCheckedRadioButtonId());
-        Q10A = (RadioButton) Q10.findViewById(Q10.getCheckedRadioButtonId());
+        Question1A = Question1.findViewById(Question1.getCheckedRadioButtonId());
+        Question3A = Question3.findViewById(Question3.getCheckedRadioButtonId());
+        Question4A = Question4.findViewById(Question4.getCheckedRadioButtonId());
+        Question6A = Question6.findViewById(Question6.getCheckedRadioButtonId());
+        Question10A = Question10.findViewById(Question10.getCheckedRadioButtonId());
 
-        if (Q1A == findViewById(R.id.heimer)) {
+        if (Question1A == findViewById(R.id.heimer)) {
             result += 1;
         }
-        if (Q3A == findViewById(R.id.draven_b)) {
+        if (Question3A == findViewById(R.id.draven_b)) {
             result += 1;
         }
-        if (Q4A == findViewById(R.id.atk_spd)) {
+        if (Question4A == findViewById(R.id.atk_spd)) {
             result += 1;
         }
-        if (Q6A == findViewById(R.id.teemo)) {
+        if (Question6A == findViewById(R.id.teemo)) {
             result += 1;
         }
-        if (Q10A == findViewById(R.id.both)) {
+        if (Question10A == findViewById(R.id.both)) {
             result += 1;
         }
-        if (Q2n1.isChecked() && Q2n2.isChecked() && !Q2n3.isChecked()) {
+        if (Question2n1.isChecked() && Question2n2.isChecked() && !Question2n3.isChecked()) {
             result += 1;
         }
-        if (Q7n1.isChecked() && Q7n2.isChecked() && Q7n3.isChecked()) {
+        if (Question7n1.isChecked() && Question7n2.isChecked() && Question7n3.isChecked()) {
             result += 1;
         }
-        if (Q8n1.isChecked() && Q8n2.isChecked() && !Q8n3.isChecked()) {
+        if (Question8n1.isChecked() && Question8n2.isChecked() && !Question8n3.isChecked()) {
             result += 1;
         }
-        if (Objects.equals(Q5.getText().toString(), "varus")||Objects.equals(Q5.getText().toString(), "Varus")||Objects.equals(Q5.getText().toString(), "VARUS")) {
+        if (Objects.equals(Question5.getText().toString(), "varus") || Objects.equals(Question5.getText().toString(), "Varus") || Objects.equals(Question5.getText().toString(), "VARUS")) {
             result += 1;
         }
-        if (Objects.equals(Q9.getText().toString(), "draven")||Objects.equals(Q9.getText().toString(), "Draven")||Objects.equals(Q9.getText().toString(), "DRAVEN")) {
+        if (Objects.equals(Question9.getText().toString(), "draven") || Objects.equals(Question9.getText().toString(), "Draven") || Objects.equals(Question9.getText().toString(), "DRAVEN")) {
             result += 1;
         }
-        if (Objects.equals(Q11.getText().toString(), "zed")||Objects.equals(Q11.getText().toString(), "Zed")||Objects.equals(Q11.getText().toString(), "ZED")) {
+        if (Objects.equals(Question11.getText().toString(), "zed") || Objects.equals(Question11.getText().toString(), "Zed") || Objects.equals(Question11.getText().toString(), "ZED")) {
             result += 1;
         }
-        if (Objects.equals(Q12.getText().toString(), "zoe")||Objects.equals(Q12.getText().toString(), "Zoe")||Objects.equals(Q12.getText().toString(), "ZOE")) {
+        if (Objects.equals(Question12.getText().toString(), "zoe") || Objects.equals(Question12.getText().toString(), "Zoe") || Objects.equals(Question12.getText().toString(), "ZOE")) {
             result += 1;
         }
+        
 
         Dialog fialog = new Dialog(this);
         fialog.setContentView(R.layout.score_dialog);
         fialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        TextView tt = (TextView) fialog.findViewById(R.id.res_dialog);
-        tt.setText(name.getText().toString()+" your score "+String.valueOf(result));
+        TextView tt = fialog.findViewById(R.id.res_dialog);
+        tt.setText(name.getText().toString() + " your score " + result);
         fialog.show();
         result = 0;
+
     }
 
+    @SuppressLint("SetTextI18n")
     public void reset(View view) {
         //CheckBox
-        if (Q2n1.isChecked()) {
-            Q2n1.setChecked(false);
+        if (Question2n1.isChecked()) {
+            Question2n1.setChecked(false);
         }
-        if (Q2n2.isChecked()) {
-            Q2n2.setChecked(false);
+        if (Question2n2.isChecked()) {
+            Question2n2.setChecked(false);
         }
-        if (Q2n3.isChecked()) {
-            Q2n3.setChecked(false);
+        if (Question2n3.isChecked()) {
+            Question2n3.setChecked(false);
         }
-        if (Q7n1.isChecked()) {
-            Q7n1.setChecked(false);
+        if (Question7n1.isChecked()) {
+            Question7n1.setChecked(false);
         }
-        if (Q7n2.isChecked()) {
-            Q7n2.setChecked(false);
+        if (Question7n2.isChecked()) {
+            Question7n2.setChecked(false);
         }
-        if (Q7n3.isChecked()) {
-            Q7n3.setChecked(false);
+        if (Question7n3.isChecked()) {
+            Question7n3.setChecked(false);
         }
-        if (Q8n1.isChecked()) {
-            Q8n1.setChecked(false);
+        if (Question8n1.isChecked()) {
+            Question8n1.setChecked(false);
         }
-        if (Q8n2.isChecked()) {
-            Q8n2.setChecked(false);
+        if (Question8n2.isChecked()) {
+            Question8n2.setChecked(false);
         }
-        if (Q8n3.isChecked()) {
-            Q8n3.setChecked(false);
+        if (Question8n3.isChecked()) {
+            Question8n3.setChecked(false);
         }
         //RadioButton
-        RadioButton r11 = (RadioButton) findViewById(R.id.diana);
+        RadioButton r11 = findViewById(R.id.diana);
         if (r11.isChecked()) {
             r11.setChecked(false);
         }
-        RadioButton r12 = (RadioButton) findViewById(R.id.galio);
+        RadioButton r12 = findViewById(R.id.galio);
         if (r12.isChecked()) {
             r12.setChecked(false);
         }
-        RadioButton r13 = (RadioButton) findViewById(R.id.heimer);
+        RadioButton r13 = findViewById(R.id.heimer);
         if (r13.isChecked()) {
             r13.setChecked(false);
         }
-        RadioButton r21 = (RadioButton) findViewById(R.id.maokai);
+        RadioButton r21 = findViewById(R.id.maokai);
         if (r21.isChecked()) {
             r21.setChecked(false);
         }
-        RadioButton r22 = (RadioButton) findViewById(R.id.nasus);
+        RadioButton r22 = findViewById(R.id.nasus);
         if (r22.isChecked()) {
             r22.setChecked(false);
         }
-        RadioButton r23 = (RadioButton) findViewById(R.id.draven_b);
+        RadioButton r23 = findViewById(R.id.draven_b);
         if (r23.isChecked()) {
             r23.setChecked(false);
         }
-        RadioButton r31 = (RadioButton) findViewById(R.id.atk_spd);
+        RadioButton r31 = findViewById(R.id.atk_spd);
         if (r31.isChecked()) {
             r31.setChecked(false);
         }
-        RadioButton r32 = (RadioButton) findViewById(R.id.armor);
+        RadioButton r32 = findViewById(R.id.armor);
         if (r32.isChecked()) {
             r32.setChecked(false);
         }
-        RadioButton r33 = (RadioButton) findViewById(R.id.health);
+        RadioButton r33 = findViewById(R.id.health);
         if (r33.isChecked()) {
             r33.setChecked(false);
         }
-        RadioButton r41 = (RadioButton) findViewById(R.id.akali);
+        RadioButton r41 = findViewById(R.id.akali);
         if (r41.isChecked()) {
             r41.setChecked(false);
         }
-        RadioButton r42 = (RadioButton) findViewById(R.id.teemo);
+        RadioButton r42 = findViewById(R.id.teemo);
         if (r42.isChecked()) {
             r42.setChecked(false);
         }
-        RadioButton r43 = (RadioButton) findViewById(R.id.braum);
+        RadioButton r43 = findViewById(R.id.braum);
         if (r43.isChecked()) {
             r43.setChecked(false);
         }
-        RadioButton r51 = (RadioButton) findViewById(R.id.ranged);
+        RadioButton r51 = findViewById(R.id.ranged);
         if (r51.isChecked()) {
             r51.setChecked(false);
         }
-        RadioButton r52 = (RadioButton) findViewById(R.id.melee);
+        RadioButton r52 = findViewById(R.id.melee);
         if (r52.isChecked()) {
             r52.setChecked(false);
         }
-        RadioButton r53 = (RadioButton) findViewById(R.id.both);
+        RadioButton r53 = findViewById(R.id.both);
         if (r53.isChecked()) {
             r53.setChecked(false);
         }
 
         //EditText
         name.getText().clear();
-        Q5.getText().clear();
-        Q9.getText().clear();
-        Q11.getText().clear();
-        Q12.getText().clear();
+        Question5.getText().clear();
+        Question9.getText().clear();
+        Question11.getText().clear();
+        Question12.getText().clear();
+        result = 0;
     }
 }
