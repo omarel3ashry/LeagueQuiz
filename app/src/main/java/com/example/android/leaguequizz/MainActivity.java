@@ -17,13 +17,31 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
-
     int result = 0;
-    EditText name, Question5, Question9, Question11, Question12;
-    CheckBox Question2n1, Question2n2, Question2n3, Question7n1, Question7n2, Question7n3, Question8n1, Question8n2, Question8n3;
-    RadioGroup Question1, Question3, Question4, Question6, Question10;
-    RadioButton Question1A, Question3A, Question4A, Question6A, Question10A;
-
+    EditText name,
+            Question5,
+            Question9,
+            Question11,
+            Question12;
+    CheckBox Question2n1,
+            Question2n2,
+            Question2n3,
+            Question7n1,
+            Question7n2,
+            Question7n3,
+            Question8n1,
+            Question8n2,
+            Question8n3;
+    RadioGroup Question1,
+            Question3,
+            Question4,
+            Question6,
+            Question10;
+    RadioButton Question1A,
+            Question3A,
+            Question4A,
+            Question6A,
+            Question10A;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
         Question11 = findViewById(R.id.q11_zed);
         Question12 = findViewById(R.id.q12_zoe);
         name = findViewById(R.id.name);
-
     }
 
     @SuppressLint("SetTextI18n")
@@ -105,7 +122,6 @@ public class MainActivity extends AppCompatActivity {
         tt.setText(name.getText().toString() + " your score " + result);
         fialog.show();
         result = 0;
-
     }
 
     @SuppressLint("SetTextI18n")
