@@ -101,16 +101,41 @@ public class MainActivity extends AppCompatActivity {
         if (Question8n1.isChecked() && Question8n2.isChecked() && !Question8n3.isChecked()) {
             result += 1;
         }
-        if (Objects.equals(Question5.getText().toString(), "varus") || Objects.equals(Question5.getText().toString(), "Varus") || Objects.equals(Question5.getText().toString(), "VARUS")) {
+        if (Objects.equals(Question5.getText().toString(), "varus")) {
             result += 1;
         }
-        if (Objects.equals(Question9.getText().toString(), "draven") || Objects.equals(Question9.getText().toString(), "Draven") || Objects.equals(Question9.getText().toString(), "DRAVEN")) {
+        else if (Objects.equals(Question5.getText().toString(), "Varus")){
             result += 1;
         }
-        if (Objects.equals(Question11.getText().toString(), "zed") || Objects.equals(Question11.getText().toString(), "Zed") || Objects.equals(Question11.getText().toString(), "ZED")) {
+        else if (Objects.equals(Question5.getText().toString(), "VARUS")){
             result += 1;
         }
-        if (Objects.equals(Question12.getText().toString(), "zoe") || Objects.equals(Question12.getText().toString(), "Zoe") || Objects.equals(Question12.getText().toString(), "ZOE")) {
+
+        if (Objects.equals(Question9.getText().toString(), "draven")) {
+            result += 1;
+        }
+        else if (Objects.equals(Question9.getText().toString(), "Draven")){
+            result += 1;
+        }
+        else if (Objects.equals(Question9.getText().toString(), "DRAVEN")){
+            result += 1;
+        }
+        if (Objects.equals(Question11.getText().toString(), "zed")) {
+            result += 1;
+        }
+        else if (Objects.equals(Question11.getText().toString(), "Zed")){
+            result += 1;
+        }
+        else if (Objects.equals(Question11.getText().toString(), "ZED")){
+            result += 1;
+        }
+        if (Objects.equals(Question12.getText().toString(), "zoe")) {
+            result += 1;
+        }
+        else if (Objects.equals(Question12.getText().toString(), "Zoe")){
+            result += 1;
+        }
+        else if (Objects.equals(Question12.getText().toString(), "ZOE")){
             result += 1;
         }
         
