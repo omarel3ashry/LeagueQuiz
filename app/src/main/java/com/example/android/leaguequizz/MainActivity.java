@@ -12,12 +12,13 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
 import java.util.Objects;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    int result = 0;
+    int result;
     EditText name,
             Question5,
             Question9,
@@ -69,8 +70,15 @@ public class MainActivity extends AppCompatActivity {
         name = findViewById(R.id.name);
     }
 
+
     @SuppressLint("SetTextI18n")
     public void submit(View view) {
+        result = 0;
+        name.getText().toString().trim();
+        Question5.getText().toString().trim();
+        Question9.getText().toString().trim();
+        Question11.getText().toString().trim();
+        Question12.getText().toString().trim();
         Question1A = Question1.findViewById(Question1.getCheckedRadioButtonId());
         Question3A = Question3.findViewById(Question3.getCheckedRadioButtonId());
         Question4A = Question4.findViewById(Question4.getCheckedRadioButtonId());
@@ -103,50 +111,50 @@ public class MainActivity extends AppCompatActivity {
         }
         if (Objects.equals(Question5.getText().toString(), "varus")) {
             result += 1;
-        }
-        else if (Objects.equals(Question5.getText().toString(), "Varus")){
+        } else if (Objects.equals(Question5.getText().toString(), "Varus")) {
             result += 1;
-        }
-        else if (Objects.equals(Question5.getText().toString(), "VARUS")){
+        } else if (Objects.equals(Question5.getText().toString(), "VARUS")) {
             result += 1;
         }
 
         if (Objects.equals(Question9.getText().toString(), "draven")) {
             result += 1;
-        }
-        else if (Objects.equals(Question9.getText().toString(), "Draven")){
+        } else if (Objects.equals(Question9.getText().toString(), "Draven")) {
             result += 1;
-        }
-        else if (Objects.equals(Question9.getText().toString(), "DRAVEN")){
+        } else if (Objects.equals(Question9.getText().toString(), "DRAVEN")) {
             result += 1;
         }
         if (Objects.equals(Question11.getText().toString(), "zed")) {
             result += 1;
-        }
-        else if (Objects.equals(Question11.getText().toString(), "Zed")){
+        } else if (Objects.equals(Question11.getText().toString(), "Zed")) {
             result += 1;
-        }
-        else if (Objects.equals(Question11.getText().toString(), "ZED")){
+        } else if (Objects.equals(Question11.getText().toString(), "ZED")) {
             result += 1;
         }
         if (Objects.equals(Question12.getText().toString(), "zoe")) {
             result += 1;
-        }
-        else if (Objects.equals(Question12.getText().toString(), "Zoe")){
+        } else if (Objects.equals(Question12.getText().toString(), "Zoe")) {
+            result += 1;
+        } else if (Objects.equals(Question12.getText().toString(), "ZOE")) {
             result += 1;
         }
-        else if (Objects.equals(Question12.getText().toString(), "ZOE")){
-            result += 1;
-        }
-        
 
-        Dialog fialog = new Dialog(this);
-        fialog.setContentView(R.layout.score_dialog);
-        fialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        TextView tt = fialog.findViewById(R.id.res_dialog);
-        tt.setText(name.getText().toString() + " your score " + result);
-        fialog.show();
-        result = 0;
+        if (result == 0) {
+            Dialog fialog = new Dialog(this);
+            fialog.setContentView(R.layout.score_dialog);
+            fialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            TextView tt = fialog.findViewById(R.id.res_dialog);
+            tt.setText(name.getText().toString() + "your answers is incorrect try again ");
+            fialog.show();
+        } else {
+            Dialog fialog = new Dialog(this);
+            fialog.setContentView(R.layout.score_dialog);
+            fialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            TextView tt = fialog.findViewById(R.id.res_dialog);
+            tt.setText(name.getText().toString() + " your score " + result);
+            fialog.show();
+            result = 0;
+        }
     }
 
     @SuppressLint("SetTextI18n")
@@ -248,5 +256,6 @@ public class MainActivity extends AppCompatActivity {
         Question11.getText().clear();
         Question12.getText().clear();
         result = 0;
+
     }
 }
